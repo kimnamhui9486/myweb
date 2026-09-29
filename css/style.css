@@ -1,0 +1,366 @@
+/*폰트 설정*/
+
+@font-face {
+  font-family: 'GumiDotum'; /* 사용할 폰트 이름 지정 */
+  src: url('..\fonts\Gumi Dotum.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBMPlexSansKR'; /* 사용할 폰트 이름 지정 */
+  src: url('../fonts/IBMPlexSansKR-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBMPlexSansKRMedium'; /* 사용할 폰트 이름 지정 */
+  src: url('../fonts/IBMPlexSansKR-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+.font {
+    font-family: 'GumiDotum', normal;
+}
+*/
+
+.font{
+  font-family:'IBMPlexSansKR', normal;
+}
+
+/*
+.font {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+*/
+
+
+
+
+
+
+/*전체 세로로 정렬..*/
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0;
+}
+
+
+
+
+/*화면 크기?? 일정하게 조절한 거*/
+.main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+
+
+
+
+
+
+/*최상단 메뉴? 제일 작은 거.. 아무튼 그거 정렬 & 세부 설정*/
+.container2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.item {
+    font-size: 12px;
+    color: #666;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+    padding: 0 5px;
+}
+input[type="text"]{
+    width: 100px;
+    height: 10px;
+    border: 1px solid #999;
+    margin-left: 40px;
+}
+input[type="submit"]{
+    font-size: 8px;
+    text-align: center;
+    padding: 0 5px;
+    align-items: center;
+}
+
+
+
+
+
+
+/*그 아래 메인 메뉴 같은 거 정렬 & 세부 설정*/
+.container3 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.menu-group {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 30px;
+}
+.item2 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    margin: 0;
+}
+.item2:hover{
+    color:#2C80D5;
+}
+
+
+
+
+
+.full-menu{
+    font-size: 12px;
+    color: #333;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+
+
+
+
+/*logo: <a>태그에 설정*/
+.logo-box {
+    margin-right: 0;
+}
+/*logo: <img>태그에 설정*/
+.logo {
+    width: 160px;
+    height: auto;
+}
+
+
+
+
+
+
+
+/*hr 태그를 예쁘게 꾸몄음*/
+#line {
+    border: none;
+    border-bottom: 5px solid #004CA5;
+    margin: 15px 0;
+}
+
+
+
+
+
+/*중간에 있는 모서리 둥근 버튼 두 개 설정*/
+.button {
+    margin: 0 0;
+    display: flex;
+    align-items: flex-start;
+}
+#blue {
+    background-color: #004CA5;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 16px;
+    margin-right: 10px;
+    font-weight: 300;
+}
+#white {
+    background-color: white;
+    color: #004CA5;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 16px;
+    border: 1px solid #004CA5;
+    box-sizing: border-box;
+    font-weight: 300;
+}
+
+
+
+
+
+
+/*완전 파란 버튼 설정*/
+.button2 {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin:-45px auto 20px auto;
+    align-items: center;
+    background-color: #004CA5;
+    color: white;
+    padding: 26px 0px;
+    border-radius: 20px;
+}
+.button2 p{
+    font-size:20px;
+    margin:0;
+    font-weight: 400;
+}
+.button2 p:hover{
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+
+
+/*링크 걸려도 기존 형식 안 변하게..*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/*카드?같은 메뉴들*/
+.card-background{
+    width:100%;
+    margin:-60px auto 0 auto;
+    background-color: #E9EEF2;
+    padding: 40px 0 ;
+    border-top-right-radius: 8%;
+}
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin: 40px auto;
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    flex: none;
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+}
+.card h1{
+  font-family: 'IBMPlexSansKRMedium';
+    color:#0082C1;
+    font-size:20px;
+    font-weight:500;
+    margin:0 0 20px 0;
+}
+.card h2{
+    margin: 0 0 10px 0;
+}
+.card p{
+  margin: 0;
+  font-weight: 300;
+  font-size: 15px;
+}
+.center{
+  text-align: center;
+}
+.left{
+  text-align: start;
+}
+
+#recommend{
+  border-radius: 20%;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 10px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.event-card {
+    padding-bottom: 0;
+}
+
+#event {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#event img {
+    display: block;
+    width: calc(100% + 60px);
+    max-width: none;
+    margin: 100px -30px 0;
+}
+.date{
+    color: #0082C1;
+}
+.article{
+    padding: 10px 0;
+    border-bottom: 1px solid #c3c3c3;
+}
+.article:nth-of-type(3){
+    border-bottom: none;
+}
+.plus{
+    text-align: center;
+    padding-top: 20px;
+}
+.notice{
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 15px 0;
+    align-items: center;
+}
+.notice .noticetext{
+    font-family: IBMPlexSansKRMedium;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+
+#img1{
+    width:100%;
+    height: auto;
+    margin:10px;
+}
+
+.img-small{
+    width: 20px;
+    height: auto;
+}
+
+
+.circle{
+    width:40px;
+    height:40px;
+    border:1px solid #c3c3c3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+footer{
+  background-color: #F8F8F8;
+  border-top: 1px solid #c3c3c3  ;
+  box-sizing: border-box;
+}
