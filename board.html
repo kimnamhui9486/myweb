@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+    <head><meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>마음 게시판 | 마음을 담아</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Gowun+Batang&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+        <script src="app.js" defer></script>
+    </head>
+    <body data-page="board">
+        <header>
+            <a class="brand" href="index.html">✉ 마음을 담아</a>
+            <nav aria-label="주 메뉴">
+                <a href="index.html" >홈</a>
+                <a href="write.html" >카드 작성하기</a>
+                <a href="board.html" aria-current="page">게시판</a>
+            </nav>
+        </header>
+        <main>
+            <section class="heading">
+                <p class="eyebrow">LETTERS FROM THE HEART</p>
+                <h1>마음이 머무는 곳.</h1>
+                <p>카드에 담아 남긴, 따뜻한 마음들을 읽어보세요.</p>
+            </section>
+            <div class="board-top">
+                <p id="board-count"></p>
+                <a class="button" href="write.html">새 마음 남기기</a>
+            </div>
+            <p class="board-info">이 게시판은 사용자들이 업로드한 카드를 보여줍니다.</p>
+            <section id="board" class="board" aria-label="게시된 카드"></section>
+        </main>
+        <footer>말로 다 하지 못한 마음, 카드로 전해요.</footer>
+        <p class="toast" role="status" aria-live="polite"></p>
+    </body>
+</html>
