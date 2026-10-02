@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>카드 작성하기 | 마음을 담아</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Gowun+Batang&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+        <script src="app.js" defer></script>
+    </head>
+    
+    <body data-page="write">
+        <header>
+            <a class="brand" href="index.html">✉ 마음을 담아</a>
+            <nav aria-label="주 메뉴">
+                <a href="index.html" >홈</a>
+                <a href="write.html" aria-current="page">카드 작성하기</a>
+                <a href="board.html" >마음 게시판</a>
+            </nav>
+        </header>
+        <main>
+            <section class="heading">
+                <p class="eyebrow">WRITE YOUR HEART</p>
+                <h1>당신의 마음을, 한 장의 카드에.</h1>
+                <p>소중한 사람에게 전하고 싶은 말을 담아보세요.</p>
+            </section>
+            <div class="workspace">
+                <form id="editor" class="panel">
+                    <fieldset>
+                        <legend>
+                            <span>01</span>폰트 선택
+                        </legend>
+                        <div class="font-options">
+                            <label>
+                                <input type="radio" name="font" value="batang" checked>
+                                <span class="batang">고운 바탕</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="font" value="hand">
+                                <span class="hand">감자꽃</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="font" value="sans">
+                                <span class="sans">깔끔한 고딕</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            <span>02</span> 카드 선택</legend>
+                            <div class="theme-options">
+                                <label>
+                                    <input type="radio" name="theme" value="cream" checked>
+                                    <span class="theme-thumb cream"><b>❀</b><small>편지지 1</small></span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="theme" value="pink" >
+                                    <span class="theme-thumb pink"><b>♡</b><small>편지지 2</small></span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="theme" value="night" >
+                                    <span class="theme-thumb night"><b>☾</b><small>편지지 3</small></span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="theme" value="line" ><span class="theme-thumb line"><b>✧</b><small>편지지 4</small></span>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend><span>03</span> 메시지 입력</legend>
+                            <label class="field" for="recipient">받는 사람
+                                <input id="recipient" maxlength="24" placeholder="소중한 너에게" value="소중한 너에게" required>
+                            </label>
+                            <label class="field" for="message">
+                                메시지
+                                <textarea id="message" maxlength="240" rows="5" required>늘 내 곁에 있어줘서 고마워. 너의 하루가 따뜻한 순간들로 가득하길 바라.</textarea>
+                            </label>
+                            <p class="counter">
+                                <span id="count">0</span> / 240
+                            </p>
+                        </fieldset>
+                            <p class="hint">게시판에 올린 메시지는 이 브라우저에 저장됩니다.<br>민감한 개인정보는 메시지에 쓰지 마세요.</p>
+                            <button class="button publish" type="submit">게시판에 올리기</button>
+                </form>
+                        <section class="preview-panel">
+                            <div class="preview-label">미리보기 <span>
+                                당신의 마음이 담기는 중</span>
+                            </div><article id="preview" class="letter cream batang">
+                                <div class="ornament" aria-hidden="true">❀</div>
+                                <h2 id="preview-to"></h2>
+                                <div class="divider">· ❀ ·</div>
+                                <p id="preview-message"></p>
+                                <small>마음을 담아</small>
+                            </article><div class="actions">
+                                <button id="download" class="button" type="button">카드 이미지 저장</button>
+                                <button id="print" class="button outline" type="button">인쇄하기</button>
+                            </div>
+                        </section>
+            </div>
+        </main>
+                <footer>말로 다 하지 못한 마음, 카드로 전해요.</footer>
+                <p class="toast" role="status" aria-live="polite"></p>
+    </body>
+</html>
